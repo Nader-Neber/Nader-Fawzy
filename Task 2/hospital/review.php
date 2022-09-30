@@ -3,7 +3,6 @@ $title = 'Review Page';
 
 include './layouts/header.php';
 include("middlewares/guest.php");
-include './layouts/navbar.php';
 
 $content = [
     'Questions' => [
@@ -14,7 +13,6 @@ $content = [
         'Are you satisfied with the calmness in the hospital',
     ]
 ];
-// $rates=['Bad','Good','Very Good','Excellent'];
 $_SESSION['rates']=[];
 for ($f=1; $f <= count($content['Questions']); $f++) { 
   if(isset($_POST["q{$f}"])){
@@ -22,8 +20,8 @@ for ($f=1; $f <= count($content['Questions']); $f++) {
       if(count($_SESSION['rates'])===count($content['Questions'])){
         header("location:result.php");die;
       }
-      // else{
-      //   $errorMessage="You are forget to Enter some Answers";
+      
+      
 // }
     }elseif(!isset($_POST["q{$f}"])){ 
       $errorMessage="You have to Enter options";
@@ -101,8 +99,7 @@ for ($f=1; $f <= count($content['Questions']); $f++) {
 
 
 <?php
-// unset($_SESSION['rates']);
-// print_r($_SESSION['rates']);
+
 include './layouts/footer.php';
 include './layouts/scripts.php';
 

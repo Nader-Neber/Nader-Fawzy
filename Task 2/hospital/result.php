@@ -3,17 +3,11 @@ $title = 'Result Page';
 
 include './layouts/header.php';
 include("middlewares/guest.php");
-include './layouts/navbar.php';
 
-
-// echo $_SESSION['number'];
-// print_r($_SESSION['rates']) ;
 $total=0;
 foreach ($_SESSION['rates'] as $value) {
     $total+=$value;
 }
-// echo $total;
-
 
 ?>
 <div class="container my-5">

@@ -3,7 +3,6 @@ $title = 'Number Page';
 
 include './layouts/header.php';
 include("middlewares/auth.php");
-include './layouts/navbar.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST) {
     if (!empty($_POST['mobile-number'])) {
@@ -20,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST) {
 }
 ?>
 
-<main style="background-image: url('images/1.jpg'); height: 600px; background-position: center;
-        background-repeat: no-repeat; background-size: cover;">
+
     <div class="container py-5">
         <h3 class=" text-success">NTI Hospitals</h3>
         <div class="card w-50 m-auto p-3" style="background-color:transparent;border-color:#5f93ad;">
